@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Tests ausführen",
+      "detail": "npm test: alle Tests unter test/",
+      "type": "shell",
+      "command": "npm test",
+      "group": { "kind": "test", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Programm starten",
+      "detail": "npm start: führt das Beispielprogramm src/main.ts aus",
+      "type": "shell",
+      "command": "npm start",
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": [],
+      "presentation": { "reveal": "always", "panel": "dedicated", "clear": true }
+    },
+    {
+      "label": "Abhängigkeiten installieren",
+      "detail": "npm install: einmalig nötig für die Typprüfung",
+      "type": "shell",
+      "command": "npm install",
+      "problemMatcher": []
+    },
+    {
+      "label": "Typprüfung",
+      "detail": "npm run typecheck: TypeScript prüft alle Typen",
+      "type": "shell",
+      "command": "npm run typecheck",
+      "dependsOn": "Abhängigkeiten installieren",
+      "problemMatcher": "$tsc"
+    }
+  ]
+}

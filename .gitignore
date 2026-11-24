@@ -1,0 +1,13 @@
+# Abhängigkeiten und erzeugte Dateien
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+
+# Logs, lokale Einstellungen und Betriebssystemdateien
+*.log
+npm-debug.log*
+.env
+.DS_Store
+Thumbs.db
+.idea/
